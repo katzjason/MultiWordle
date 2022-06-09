@@ -1,4 +1,2 @@
-# MultiWordle
-CS3110 Final Project
-
-This is our Project
+Inspired by *The New York Times'* crossword-style game Wordle, MultiWordle is 
+an arcade of Wordle-style games written entirely in OCaml. 

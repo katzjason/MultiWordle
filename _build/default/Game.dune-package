@@ -1,0 +1,113 @@
+(lang dune 3.0)
+(name Game)
+(sections (lib .) (libexec .) (doc ../../doc/Game))
+(files
+ (lib
+  (META
+   data_processing.ml
+   data_processing.mli
+   dune-package
+   game.a
+   game.cma
+   game.cmi
+   game.cmt
+   game.cmx
+   game.cmxa
+   game.ml
+   game__Data_processing.cmi
+   game__Data_processing.cmt
+   game__Data_processing.cmti
+   game__Data_processing.cmx
+   game__Greedy_state.cmi
+   game__Greedy_state.cmt
+   game__Greedy_state.cmti
+   game__Greedy_state.cmx
+   game__Grid.cmi
+   game__Grid.cmt
+   game__Grid.cmti
+   game__Grid.cmx
+   game__Player.cmi
+   game__Player.cmt
+   game__Player.cmti
+   game__Player.cmx
+   game__Scoring.cmi
+   game__Scoring.cmt
+   game__Scoring.cmti
+   game__Scoring.cmx
+   game__State.cmi
+   game__State.cmt
+   game__State.cmti
+   game__State.cmx
+   game__Storage.cmi
+   game__Storage.cmt
+   game__Storage.cmti
+   game__Storage.cmx
+   game__Word_search_state.cmi
+   game__Word_search_state.cmt
+   game__Word_search_state.cmti
+   game__Word_search_state.cmx
+   greedy_state.ml
+   greedy_state.mli
+   grid.ml
+   grid.mli
+   opam
+   player.ml
+   player.mli
+   scoring.ml
+   scoring.mli
+   state.ml
+   state.mli
+   storage.ml
+   storage.mli
+   word_search_state.ml
+   word_search_state.mli))
+ (libexec (game.cmxs))
+ (doc (README.md)))
+(library
+ (name Game)
+ (kind normal)
+ (archives (byte game.cma) (native game.cmxa))
+ (plugins (byte game.cma) (native game.cmxs))
+ (native_archives game.a)
+ (requires yojson ANSITerminal)
+ (main_module_name Game)
+ (modes byte native)
+ (modules
+  (wrapped
+   (main_module_name Game)
+   (modules
+    ((name Data_processing)
+     (obj_name game__Data_processing)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name Greedy_state)
+     (obj_name game__Greedy_state)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name Grid) (obj_name game__Grid) (visibility public) (impl) (intf))
+    ((name Player) (obj_name game__Player) (visibility public) (impl) (intf))
+    ((name Scoring)
+     (obj_name game__Scoring)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name State) (obj_name game__State) (visibility public) (impl) (intf))
+    ((name Storage)
+     (obj_name game__Storage)
+     (visibility public)
+     (impl)
+     (intf))
+    ((name Word_search_state)
+     (obj_name game__Word_search_state)
+     (visibility public)
+     (impl)
+     (intf)))
+   (alias_module
+    (name Game)
+    (obj_name game)
+    (visibility public)
+    (kind alias)
+    (impl))
+   (wrapped true))))

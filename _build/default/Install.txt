@@ -1,0 +1,6 @@
+Welcome to MultiWordle. Below, we outline installation instructions. Please 
+follow them carefully.
+
+i. Unzip file
+ii. Run 'make build'
+iii. Run 'make play'

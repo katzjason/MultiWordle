@@ -1,0 +1,30 @@
+(** @canonical Game.Data_processing *)
+module Data_processing = Game__Data_processing
+
+
+(** @canonical Game.Greedy_state *)
+module Greedy_state = Game__Greedy_state
+
+
+(** @canonical Game.Grid *)
+module Grid = Game__Grid
+
+
+(** @canonical Game.Player *)
+module Player = Game__Player
+
+
+(** @canonical Game.Scoring *)
+module Scoring = Game__Scoring
+
+
+(** @canonical Game.State *)
+module State = Game__State
+
+
+(** @canonical Game.Storage *)
+module Storage = Game__Storage
+
+
+(** @canonical Game.Word_search_state *)
+module Word_search_state = Game__Word_search_state
